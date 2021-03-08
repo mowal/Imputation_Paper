@@ -1,0 +1,5 @@
+dataset,split,num_latent,burnin,nsamples
+Ames,compound,64,400,1600
+Ames,assay,16,400,3200
+Tox21,compound,16,800,3200
+Tox21,assay,16,400,800

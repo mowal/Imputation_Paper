@@ -1,0 +1,5 @@
+dataset,split,hidden_layers,nodes_per_layer,learning_rate,dropout,L2_regulation,batch_size,class_weight,epochs
+Ames,compound,2,2048,0.0003,0.5,0.0001,50,1,10
+Ames,assay,2,2048,0.0003,0.2,0.0001,50,1,10
+Tox21,compound,2,1024,0.001,0.5,0.0001,50,15,10
+Tox21,assay,2,2048,0.0003,0.2,0.0001,50,15,10
