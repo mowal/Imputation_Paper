@@ -203,7 +203,7 @@ def majority_agg(df_grouped): #function that performs aggregation of several row
     return(df_return)
 
 
-df = pd.read_csv('mowal/Imputation_Paper/Data/ISSSTY_part1/ISSSTY_v1a_7367_02May011.txt',delimiter='\t')
+df = pd.read_csv('mowal/Imputation_Paper/Data/ISSSTY_v1a_7367_02May011.txt',delimiter='\t')
 
 df.drop(labels=['Structure [idcode]','Unnamed: 72','SMILES'],axis=1,inplace=True)
 df.rename(columns={'Smiles_new': 'Smiles'},inplace=True)
@@ -279,4 +279,4 @@ df_agg.reset_index(inplace=True,drop=True)
 #add column containing CAS of original entries that map to the aggregated data row
 df_agg['CAS'] = [dict_smi_cas[smi] for smi in df_agg['standardised_smiles']]
 
-df_agg.to_csv('mowal/Imputation_Paper/Ames_aggregated.csv',index=False)
+df_agg.to_csv('mowal/Imputation_Paper/Data/Ames_aggregated.csv',index=False)
