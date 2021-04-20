@@ -1,5 +1,8 @@
 **Code**
 
+To run the scripts, you can use the Anaconda environment [imputation_env.yml](imputation_env.yml) or [macau_env.yml](macau_env.yml) for the Macau models. Instructions on how the environments can be created from the .yml files can be found in the [Anaconda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file). 
+
+
 The chemical standardisation and subsequent aggregation of duplicate SMILES is done in [Ames_standardisation_aggregation.py](Ames_standardisation_aggregation.py) and [Tox21_standardisation_aggregation.py](Tox21_standardisation_aggregation.py).
 
 The generation of train-test splits is done in [Ames_splitting.py](Ames_splitting.py).
