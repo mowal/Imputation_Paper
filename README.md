@@ -1,9 +1,9 @@
 # Imputation_Paper
 
-This is the code repository for the paper' Characeterisation of imputation models for toxicity prediction' by Walter et al. It contains the code required to reproduce the results.
+This is the code repository for the paper' Characeterisation of imputation models for toxicity prediction' by Walter et al.
 
-The original and processed data files can be found in [here](../Data)
+The original and processed data files can be found in [Data](../Data).
 
-The code is in
+The code required to reproduce the results can be found in [Code](../Code).
 
-The results are in 
+The results can be found in [Results](../Results).
