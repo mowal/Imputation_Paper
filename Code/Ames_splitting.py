@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 
 #compound-based splits
 
-df_agg = pd.read_csv('mowal/Imputation_Paper/Data/Ames_aggregated.csv',index_col=False)
+df_agg = pd.read_csv('mowal/Imputation_Paper/Data/Datasets/Ames_aggregated.csv',index_col=False)
 
 #split randomly and see what sparsity values are obtained
 train,test = train_test_split(df_agg,test_size=0.2,shuffle=True,random_state=23)
@@ -30,8 +30,8 @@ for assay in df_agg.iloc[:,:-1].columns:
         if math.isnan(i) == True:
             count_test-=1
     
-train.to_csv('mowal/Imputation_Paper/Data/train_set_compound_based_Ames.csv',index=False)
-test.to_csv('mowal/Imputation_Paper/Data/test_set_compound_based_Ames.csv',index=False)
+train.to_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/train_set_compound_based_Ames.csv',index=False)
+test.to_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/test_set_compound_based_Ames.csv',index=False)
 
 
 
@@ -70,5 +70,5 @@ for i,row in df_test.iterrows():
         if i not in dict_indices_test[assay]:
             df_test.loc[i,assay] = np.nan
             
-df_train.to_csv('mowal/Imputation_Paper/Data/train_set_assay_based_Ames.csv',index=False)
-df_test.to_csv('mowal/Imputation_Paper/Data/test_set_assay_based_Ames.csv',index=False)
+df_train.to_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/train_set_assay_based_Ames.csv',index=False)
+df_test.to_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/test_set_assay_based_Ames.csv',index=False)
