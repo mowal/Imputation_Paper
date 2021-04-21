@@ -11,7 +11,7 @@ import math
 
 
 #get indices for train and test compounds per assay
-df_train = pd.read_csv('mowal/Imputation_Paper/Data/train_set_asssay_based_Ames.csv')
+df_train = pd.read_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/train_set_asssay_based_Ames.csv')
 assays = df_train.columns[:-1]
 dict_indices_train = {}
 
@@ -21,7 +21,7 @@ for assay in assays:
         if not math.isnan(j):
             dict_indices_train[assay].append(i)
             
-df_test = pd.read_csv('mowal/Imputation_Paper/Data/test_set_assay_based_Ames.csv')
+df_test = pd.read_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/test_set_assay_based_Ames.csv')
 assays = df_test.columns[:-1]
 dict_indices_test = {}
 
@@ -82,14 +82,14 @@ for assay in assays:
         
         
 #import predictions
-df_dnn_single = pd.read_csv('mowal/Imputation_Paper/Results/predictions_dnn_assay_based_Ames.csv')
-df_dnn_fn = pd.read_csv('mowal/Imputation_Paper/Results/predictions_dnn_fn_assay_based_Ames.csv')
-df_xgb_single = pd.read_csv('mowal/Imputation_Paper/Results/predictions_xgb_assay_based_Ames.csv')
-df_xgb_fn = pd.read_csv('mowal/Imputation_Paper/Results/predictions_xgb_fn_assay_based_Ames.csv')
-df_rf_single = pd.read_csv('mowal/Imputation_Paper/Results/predictions_rf_assay_based_Ames.csv')
-df_rf_fn = pd.read_csv('mowal/Imputation_Paper/Results/predictions_rf_fn_assay_based_Ames.csv')
-df_dnn_mt = pd.read_csv('mowal/Imputation_Paper/Results/predictions_dnn_mt_assay_based_Ames.csv')
-df_macau = pd.read_csv('mowal/Imputation_Paper/Results/predictions_macau_assay_based_Ames.csv')
+df_dnn_single = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_dnn_assay_based_Ames.csv')
+df_dnn_fn = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_dnn_fn_assay_based_Ames.csv')
+df_xgb_single = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_xgb_assay_based_Ames.csv')
+df_xgb_fn = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_xgb_fn_assay_based_Ames.csv')
+df_rf_single = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_rf_assay_based_Ames.csv')
+df_rf_fn = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_rf_fn_assay_based_Ames.csv')
+df_dnn_mt = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_dnn_mt_assay_based_Ames.csv')
+df_macau = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_macau_assay_based_Ames.csv')
 
 #method -> df
 df_dict = {'dnn':df_dnn_single,'dnn_fn':df_dnn_fn,'xgb':df_xgb_single, 'xgb_fn':df_xgb_fn, 'rf':df_rf_single, 'rf_fn':df_rf_fn, 'dnn_mt': df_dnn_mt,
@@ -136,4 +136,4 @@ for method in ['dnn','dnn_fn','xgb','xgb_fn','rf','rf_fn','dnn_mt','macau']:
                                                   dict_predictions[method][assay][round_][bin_]))
 
 df_scores = pd.DataFrame(data={'method':method_list,'assay':assay_list,'round':round_list,'bin':bin_list,'MCC':mcc_list})
-df_scores.to_csv('mowal/Imputation_Paper/Results/mcc_data_availability_bins_Ames.csv',index=False)                
+df_scores.to_csv('mowal/Imputation_Paper/Results/Scores/mcc_data_availability_bins_Ames.csv',index=False)                
