@@ -108,7 +108,7 @@ def mutual_info(array):
     return(mi)
     
     
-df = pd.read_csv('mowal/Imputation_Paper/Data/Ames_aggregated.csv')
+df = pd.read_csv('mowal/Imputation_Paper/Data/Datasets/Ames_aggregated.csv')
 df.head()
 
 df.drop('standardised_smiles',axis=1,inplace=True)
