@@ -202,7 +202,7 @@ def majority_agg(df_grouped): #function that performs aggregation of several row
     return(df_return)
 
 
-df = pd.read_csv('mowal/Imputation_Paper/Data/Tox21joined.csv')
+df = pd.read_csv('mowal/Imputation_Paper/Data/Datasets/Tox21joined.csv')
 
 #drop rows for which no mol can be generated in rdkit
 df = df.astype({'Smiles' : 'str'})
@@ -260,4 +260,4 @@ df_agg.reset_index(inplace=True,drop=True)
 #add column containing identifier
 df_agg['Identifier'] = [dict_smi_name[smi] for smi in df_agg['standardised_smiles']]
 
-df_agg.to_csv('mowal/Imputation_Paper/Data/Tox21_aggregated.csv',index=False)
+df_agg.to_csv('mowal/Imputation_Paper/Data/Datasets/Tox21_aggregated.csv',index=False)
