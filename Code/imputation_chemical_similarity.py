@@ -24,7 +24,7 @@ def fill_matrix(array): #function that fills Tanimoto matrix: 1 in diagonal; [i,
     return(array)
 
 
-df_train = pd.read_csv('mowal/Imputation_Paper/Data/train_set_assay_based_Ames.csv')
+df_train = pd.read_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/train_set_assay_based_Ames.csv')
 assays = df_train.columns[:-1]
 dict_indices_train = {}
 
@@ -34,7 +34,7 @@ for assay in assays:
         if not math.isnan(j):
             dict_indices_train[assay].append(i)
             
-df_test = pd.read_csv('mowal/Imputation_Paper/Data/test_set_assay_based_Ames.csv')
+df_test = pd.read_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/test_set_assay_based_Ames.csv')
 assays = df_test.columns[:-1]
 dict_indices_test = {}
 
@@ -46,7 +46,7 @@ for assay in assays:
 
 
 
-tani = pd.read_csv('mowal/Imputation_Paper/Data/tanimoto_similarities_Ames.txt',header=None) # note that the .txt file is not stored in the reporsitory due to its size, can be generated using the compute_Tanimoto_similarity.py script 
+tani = pd.read_csv('tanimoto_similarities_Ames.txt',header=None) # note that the .txt file is not stored in the reporsitory due to its size, can be generated using the compute_Tanimoto_similarity.py script 
 tani.columns = ['C1', 'C2', 'Tanimoto']
 
 #add rows for first and last object to get correct format in pivot table 
@@ -129,14 +129,14 @@ for assay in assays:
         
 
 #import predictions
-df_dnn_single = pd.read_csv('mowal/Imputation_Paper/Results/predictions_dnn_assay_based_Ames.csv')
-df_dnn_fn = pd.read_csv('mowal/Imputation_Paper/Results/predictions_dnn_fn_assay_based_Ames.csv')
-df_xgb_single = pd.read_csv('mowal/Imputation_Paper/Results/predictions_xgb_assay_based_Ames.csv')
-df_xgb_fn = pd.read_csv('mowal/Imputation_Paper/Results/predictions_xgb_fn_assay_based_Ames.csv')
-df_rf_single = pd.read_csv('mowal/Imputation_Paper/Results/predictions_rf_assay_based_Ames.csv')
-df_rf_fn = pd.read_csv('mowal/Imputation_Paper/Results/predictions_rf_fn_assay_based_Ames.csv')
-df_dnn_mt = pd.read_csv('mowal/Imputation_Paper/Results/predictions_dnn_mt_assay_based_Ames.csv')
-df_macau = pd.read_csv('mowal/Imputation_Paper/Results/predictions_macau_assay_based_Ames.csv')
+df_dnn_single = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_dnn_assay_based_Ames.csv')
+df_dnn_fn = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_dnn_fn_assay_based_Ames.csv')
+df_xgb_single = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_xgb_assay_based_Ames.csv')
+df_xgb_fn = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_xgb_fn_assay_based_Ames.csv')
+df_rf_single = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_rf_assay_based_Ames.csv')
+df_rf_fn = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_rf_fn_assay_based_Ames.csv')
+df_dnn_mt = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_dnn_mt_assay_based_Ames.csv')
+df_macau = pd.read_csv('mowal/Imputation_Paper/Results/Predictions/predictions_macau_assay_based_Ames.csv')
 
 
 
@@ -183,4 +183,4 @@ for method in ['dnn','dnn_fn','xgb','xgb_fn','rf','rf_fn','dnn_mt','macau']:
                 mcc_list.append(matthews_corrcoef(dict_assay_bin_true[assay][bin_],
                                                   dict_predictions[method][assay][round_][bin_]))
 df_scores = pd.DataFrame(data={'method':method_list,'assay':assay_list,'round':round_list,'bin':bin_list,'MCC':mcc_list})
-df_scores.to_csv('mowal/Imputation_Paper/Results/mcc_similartiy_bins_Ames.csv',index=False)
+df_scores.to_csv('mowal/Imputation_Paper/Results/Scores/mcc_similartiy_bins_Ames.csv',index=False)
