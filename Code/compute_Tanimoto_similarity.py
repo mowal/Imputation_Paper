@@ -11,7 +11,7 @@ from rdkit import DataStructs
 import pandas as pd
 
 #import file
-df = pd.read_csv('mowal/Imputation_Paper/Data/Ames_aggregated.csv')
+df = pd.read_csv('mowal/Imputation_Paper/Data/Datasets/Ames_aggregated.csv')
 
 
 #generate list of fps from smiles
