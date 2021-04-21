@@ -21,10 +21,10 @@ from sklearn.metrics import roc_auc_score
 from sklearn.metrics import f1_score
 
 #train and test set for assay-based splits imported
-df_train = pd.read_csv('mowal/Imputation_Paper/Data/train_set_assay_based_Ames.csv')
-df_test = pd.read_csv('mowal/Imputation_Paper/Data/test_set_assay_based_Ames.csv')
+df_train = pd.read_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/train_set_assay_based_Ames.csv')
+df_test = pd.read_csv('mowal/Imputation_Paper/Data/Train_Test_Splits/test_set_assay_based_Ames.csv')
 df_filled = df_train.iloc[:,:-1].copy()
-df_params = pd.read_csv('mowal/Imputation_Paper/Data/XGB_hyperparameters.csv')
+df_params = pd.read_csv('mowal/Imputation_Paper/Data/Hyperparameters/XGB_hyperparameters.csv')
 
 #get correct slice of df_params (Ames, assay-based splits)
 df_params_slice = df_params[(df_params['dataset']=='Ames')&(df_params['split']=='assay')].copy()
@@ -231,4 +231,4 @@ for assay in assays:
 df_scores = pd.DataFrame(data={'target_assay':assay1_col,'auxiliary_assay':assay2_col,'round':round_col,'accuracy':acc,'balanced_accuracy':bal_acc,'precision':prec,
                                'recall':rec,'AUC':auc,'F1':f1,'MCC':mcc})
 
-df_scores.to_csv('mowal/Imputation_Paper/Results/scores_xgb_fn_pairwise_Ames.csv',index=False)
+df_scores.to_csv('mowal/Imputation_Paper/Results/Scores/scores_xgb_fn_pairwise_assay_based_Ames.csv',index=False)
