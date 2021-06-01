@@ -1,6 +1,8 @@
 **Data**
 
-The original and processed files for the Ames and Tox21 dataset can be found in [Datasets](Datasets). The Tox21 dataset was downloaded from [https://tripod.nih.gov/tox21/challenge/data.jsp](https://tripod.nih.gov/tox21/challenge/data.jsp) (last accessed 2021-05-25) and the Ames dataset (ISSSTY) from [https://www.iss.it/isstox](https://www.iss.it/isstox) (last accessed 2021-05-25).
+The original files for the Ames and Tox21 dataset can be found in [Original_Datasets](Original_Datasets). The Tox21 dataset was downloaded from [https://tripod.nih.gov/tox21/challenge/data.jsp](https://tripod.nih.gov/tox21/challenge/data.jsp) (last accessed 2021-05-25) and the Ames dataset (ISSSTY) from [https://www.iss.it/isstox](https://www.iss.it/isstox) (last accessed 2021-05-25).
+
+The processed datasets (after joining, chemical standardization and agregation) can be found in [Processd_Datasets](Processed_Datasets).
 
 The train and test splits (compound-based and assay-based) for the Ames and Tox21 dataset can be found in [Train_Test_Splits](Train_Test_Splits).
 
