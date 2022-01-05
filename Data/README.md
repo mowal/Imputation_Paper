@@ -6,4 +6,4 @@ The processed datasets (after joining, chemical standardization and aggregation 
 
 The train and test splits (compound-based and assay-based) for the Ames and Tox21 dataset can be found in [Train_Test_Splits](Train_Test_Splits). For the ToxCast dataset, the training set used with artificially increased sparsity is included.
 
-The hyperparameters used for all machine learning models can be found in [Hyperparameters](Hyperparameters). Note that the Feature Net models used the same hyperparameters as the respective single task models.
+The hyperparameters used for all machine learning models can be found in [Hyperparameters](Hyperparameters). Note that the Feature Net models used the same hyperparameters as the respective single task models. Note that the hyperparameters used for the ToxCast dataset were manually selected and are identical for all assays.

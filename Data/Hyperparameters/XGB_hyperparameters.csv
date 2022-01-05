@@ -47,3 +47,4 @@ Tox21,assay,SR-HSE,300,0.5,0.5,1,0,weight
 Tox21,assay,SR-MMP,300,0.5,0.5,10,1,weight
 Tox21,assay,SR-p53,700,0.3,0.5,1,1,weight
 Tox21,assay,NR-Aromatase,700,0.3,0.7,10,1,1
+Toxcast,assay,all,700,0.1,0.5,10,1,1
