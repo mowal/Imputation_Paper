@@ -52,7 +52,7 @@ random.seed(a=47)
 
 dict_indices_test = {}
 for assay in assays:
-    #get a integer k which is the amount of data points assigned to the test set for each assay
+    #get an integer k which is the amount of data points assigned to the test set for each assay
     k = round(0.2*len(dict_indices[assay]))
     dict_indices_test[assay] = random.sample(dict_indices[assay], k=k)
     
