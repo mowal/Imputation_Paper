@@ -22,4 +22,4 @@ assays_to_keep.append('standardised_smiles')
 
 df_toxcast_filtered = df_toxcast.loc[:,assays_to_keep].copy()
 
-df_toxcast_filtered.to_csv('mowal/Imputation_Paper/Data/Datasets/Toxcast_filtered.csv',index=False)
+df_toxcast_filtered.to_csv('mowal/Imputation_Paper/Data/Datasets/toxcast_filtered.csv',index=False)
