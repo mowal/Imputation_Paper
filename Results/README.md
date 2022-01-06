@@ -1,6 +1,6 @@
 **Results**
 
-Several scoring metrics for all models on both compound-based and assay-based splits can be found in [Scores](Scores). This folder also contains the results for the investigations on chemical similarity and data availability. For the ToxCast dataset, scores for different models are aggregated in summary files ([general and GHOST](Scores/sores_toxcast_incl_GHOST.csv),[sparsity](Scores/scores_toxcast_sparse.csv),[Aromatase with assay selection](Scores/scores_toxcast_aromatase_medians.csv)).
+Several scoring metrics for all models on both compound-based and assay-based splits can be found in [Scores](Scores). This folder also contains the results for the investigations on chemical similarity and data availability. For the ToxCast dataset, scores for different models are aggregated in summary files ([general and GHOST](Scores/sores_toxcast_incl_GHOST.csv), [sparsity](Scores/scores_toxcast_sparse.csv), [Aromatase with assay selection](Scores/scores_toxcast_aromatase_medians.csv)).
 
 The folder [Predictions](Predictions) contains the predictions for indivudual compounds for the models on assay-based splits as required for the analysis on chemical similarity, data availability and GHOST analysis.
 
