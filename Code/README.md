@@ -3,7 +3,7 @@
 To run the scripts, the Anaconda environment [imputation_env.yml](imputation_env.yml) or [macau_env.yml](macau_env.yml) for the Macau models can be used. Instructions on how the environments can be created from the .yml files can be found in the [Anaconda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file). 
 
 
-The chemical standardisation and subsequent aggregation of duplicate SMILES is done in [Ames_standardisation_aggregation.py](Ames_standardisation_aggregation.py) and [Tox21_standardisation_aggregation.py](Tox21_standardisation_aggregation.py).
+The chemical standardisation and subsequent aggregation of duplicate SMILES is done in [Ames_standardisation_aggregation.py](Ames_standardisation_aggregation.py) and [Tox21_standardisation_aggregation.py](Tox21_standardisation_aggregation.py). The filtering of assays (at least 50 actives and 50 inactives) is done in [Toxcast_filtering.py](Toxcast_filtering.py). The filtering used to artificially increased the sparsity in the ToxCast dataset is done in [Toxcast_sparsity_filtering.py](Toxcast_sparsity_filtering.py). 
 
 The generation of train-test splits is done in [Ames_splitting.py](Ames_splitting.py) and [Toxcast_splitting.py](Toxcast_splitting.py).
 
